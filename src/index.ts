@@ -25,4 +25,4 @@ app.use(routes);
 //- Run server
 app.listen(port);
 
-console.log(`>>> 🦊 Netsystems Services running | PORT:${port} >>>`);
+console.log(`--> 🦊 Netsystems Services running | PORT:${port}`);
