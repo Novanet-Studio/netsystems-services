@@ -1,15 +1,5 @@
-# netsystems-services
+# Netsystems Services
 
-To install dependencies:
+API bridge to Netsystems Services
 
-```bash
-bun install
-```
-
-To run:
-
-```bash
-bun run index.ts
-```
-
-This project was created using `bun init` in bun v1.1.38. [Bun](https://bun.sh) is a fast all-in-one JavaScript runtime.
+- [src/users](./src/users/users.router.ts): Manage the mikrowisp users API.
