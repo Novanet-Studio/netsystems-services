@@ -14,7 +14,6 @@ export async function getClientsDetailsHandler({ body, set }: App.QueryParams) {
 
     logger.info(error, "get_client_details_error");
 
-
     return {
       status: "Internal Server Error",
       error: "Error interno de servidor",

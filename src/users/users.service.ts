@@ -1,5 +1,5 @@
-const API_KEY = process.env.MIKROWISP_API_KEY;
-const API_URL = process.env.MIKROWISP_API_URL;
+const API_URL = process.env.MIK_API_URL;
+const API_KEY = process.env.MIK_API_KEY;
 
 async function fetchUserApi(endpoint: string, body: any) {
   const url = `${API_URL}${endpoint}`;
