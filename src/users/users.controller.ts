@@ -15,8 +15,9 @@ export async function getClientsDetailsHandler({ body, set }: App.QueryParams) {
     logger.info(error, "get_client_details_error");
 
     return {
+      estado: "error",
       status: "Internal Server Error",
-      error: "Error interno de servidor",
+      message: "Error interno de servidor",
     };
   }
 }
@@ -33,8 +34,9 @@ export async function getDebtHandler({ body, set }: App.QueryParams) {
     logger.info(error, "consulta_deuda_error");
 
     return {
+      estado: "error",
       status: "Internal Server Error",
-      error: "Error interno de servidor",
+      message: "Error interno de servidor",
     };
   }
 }
@@ -58,8 +60,9 @@ export async function registerPaymentHandler({ body, set }: App.QueryParams) {
     logger.info(error, "registrar_pago_error");
 
     return {
+      estado: "error",
       status: "Internal Server Error",
-      error: "Error interno de servidor",
+      message: "Error interno de servidor",
     };
   }
 }

@@ -9,13 +9,13 @@ import { conformationDto, otpDto, paymentDto } from "./bdt.dto";
 
 const btRouter = new Elysia();
 
-btRouter.post("/bancos", getBanksHandler);
+btRouter.post("/getBanks", getBanksHandler);
 
-btRouter.post("/clave", getOTPHandler, {
+btRouter.post("/getOTP", getOTPHandler, {
   body: otpDto,
 });
 
-btRouter.post("/pago", paymentHandler, {
+btRouter.post("/setPayment", paymentHandler, {
   body: paymentDto,
 });
 

@@ -10,6 +10,6 @@ const routes = new Elysia({ prefix: "/v1" });
 routes.group("/user", (app) => app.use(usersRouter));
 
 //> banks
-routes.group("/bt", (app) => app.use(bdtRouter));
+routes.group("/bdt", (app) => app.use(bdtRouter));
 
 export default routes;
