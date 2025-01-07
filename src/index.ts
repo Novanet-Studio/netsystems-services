@@ -6,7 +6,7 @@ import { logger } from "@chneau/elysia-logger";
 /// others
 import routes from "./routes";
 
-const port = Number(process.env.PORT) || 8001;
+const port = Number(process.env.APP_PORT) || 8001;
 
 const app = new Elysia({ prefix: "/api" });
 

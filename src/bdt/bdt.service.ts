@@ -26,6 +26,15 @@ export async function getOTP(destination: string) {
 }
 
 export async function makePayment(payload: App.MakePaymentPayload) {
+  console.log(`<<< payload >>>`, {
+    ...payload,
+    canal: "06",
+    RIF: BUSSINESS_RIF,
+    codAfiliado: AFILIATED_CODE,
+    concepto: getConcept(payload.nombre),
+    comercio: "",
+  });
+
   return fetchBdTApi("/botonDePago/pago", {
     ...payload,
     canal: "06",

@@ -3,6 +3,7 @@ import { getClientsDetails, getDebt, registerPayment } from "./users.service";
 
 const logger = new Logger("users");
 
+// Handler function to retrieve client details based on provided cedula
 export async function getClientsDetailsHandler({ body, set }: App.QueryParams) {
   try {
     const response = await getClientsDetails(body.cedula);
@@ -22,6 +23,7 @@ export async function getClientsDetailsHandler({ body, set }: App.QueryParams) {
   }
 }
 
+// Handler function to retrieve debt information based on provided cedula
 export async function getDebtHandler({ body, set }: App.QueryParams) {
   try {
     const response = await getDebt(body.cedula);
@@ -41,6 +43,7 @@ export async function getDebtHandler({ body, set }: App.QueryParams) {
   }
 }
 
+// Handler function to register a payment with the provided details
 export async function registerPaymentHandler({ body, set }: App.QueryParams) {
   try {
     const payload = {

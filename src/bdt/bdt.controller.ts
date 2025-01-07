@@ -23,6 +23,7 @@ export async function getBanksHandler({ set }: App.QueryParams) {
   }
 }
 
+
 export async function getOTPHandler({ body, set }: App.QueryParams) {
   try {
     const response = await getOTP(body.celularDestino);
