@@ -23,15 +23,17 @@ export async function getBanksHandler({ set }: App.QueryParams) {
   }
 }
 
-
 export async function getOTPHandler({ body, set }: App.QueryParams) {
   try {
     const response = await getOTP(body.celularDestino);
+
     const json = await response.json();
 
     return json;
   } catch (error) {
     set.status = "Internal Server Error";
+
+    logger.info(error, "get_otp_error");
 
     return {
       status: "Internal Server Error",
@@ -51,9 +53,8 @@ export async function paymentHandler({ body, set }: App.QueryParams) {
       nombre: body.nombre,
     };
 
-    logger.info(payload, "boton_de_pago_payload");
-
     const response = await makePayment(payload);
+
     const json = await response.json();
 
     logger.info(json, "boton_de_pago_response");

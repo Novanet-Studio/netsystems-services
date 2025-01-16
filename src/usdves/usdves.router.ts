@@ -1,8 +1,9 @@
 import { Elysia } from "elysia";
-import { getUsdVes1Handler } from "./usdves.controller";
+import { getUsdVesCurrentHandler } from "./usdves.controller";
 
 const usdVesRouter = new Elysia();
 
-usdVesRouter.get("/get-usd-ves-rate-1", getUsdVes1Handler);
+usdVesRouter.get("/getUsdVesCurrent", getUsdVesCurrentHandler);
+//usdVesRouter.get("/getUsdVesCate1", getUsdVesCurrentHandler);
 
 export default usdVesRouter;
