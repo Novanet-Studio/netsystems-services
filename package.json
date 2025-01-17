@@ -1,8 +1,8 @@
 {
   "name": "netsystems-services",
-  "version": "1.0.0",
-  "module": "index.ts",
+  "version": "1.0.1",
   "type": "module",
+  "module": "src/index.js",
   "scripts": {
     "dev": "bun run --watch src/index.ts"
   },
@@ -15,10 +15,6 @@
   "dependencies": {
     "@chneau/elysia-logger": "^1.0.10",
     "@elysiajs/cors": "^1.1.1",
-    "@sparticuz/chromium": "^131.0.1",
-    "elysia": "^1.1.26",
-    "playwright": "^1.49.1",
-    "playwright-chromium": "^1.49.1",
-    "playwright-core": "^1.49.1"
+    "elysia": "^1.1.26"
   }
 }
