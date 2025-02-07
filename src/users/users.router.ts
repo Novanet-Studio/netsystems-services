@@ -12,15 +12,15 @@ import {
 
 const usersRouter = new Elysia();
 
-usersRouter.post("/get-client-details", getClientsDetailsHandler, {
+usersRouter.post("/getClientDetails", getClientsDetailsHandler, {
   body: getClientsDetailsDto,
 });
 
-usersRouter.post("/consulta-deuda", getDebtHandler, {
+usersRouter.post("/getDebt", getDebtHandler, {
   body: getDebtDto,
 });
 
-usersRouter.post("/registrar-pago", registerPaymentHandler, {
+usersRouter.post("/setPayment", registerPaymentHandler, {
   body: registerPaymentDto,
 });
 

@@ -1,4 +1,4 @@
-namespace App {
+declare namespace App {
   interface QueryParams {
     body: any;
     set: any;
@@ -10,5 +10,23 @@ namespace App {
     valor: number;
     fecha: string;
     secuencial: number;
+  }
+
+  //? src/bdt
+  interface MakePaymentPayload {
+    celular: string;
+    banco: string;
+    cedula: string;
+    monto: string;
+    token: string;
+    nombre: string;
+  }
+
+  interface MakeConfirmationPayload {
+    referencia: string;
+    monto: string;
+    banco: string;
+    fecha: string;
+    celular: string;
   }
 }

@@ -1,8 +1,8 @@
 {
   "name": "netsystems-services",
-  "version": "1.0.0",
-  "module": "index.ts",
+  "version": "1.0.1",
   "type": "module",
+  "module": "src/index.js",
   "scripts": {
     "dev": "bun run --watch src/index.ts"
   },
